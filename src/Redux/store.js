@@ -1,12 +1,30 @@
 import { combineReducers, createStore } from "redux";
-import { progressReducer, setPage, setPhoto, userDetailsReducer } from "./Reducer";
+import {
+  certificatesDetailsReducer,
+  educationDetailsReducer,
+  experienceDetailsReducer,
+  intenshipDetailsReducer,
+  languagesDetailsReducer,
+  progressReducer,
+  projectsDetailsReducer,
+  setPhoto,
+  skillsDetailsReducer,
+  socialLinksDetailsReducer,
+  userDetailsReducer,
+} from "./Reducer";
 
 const rootReducer = combineReducers({
-  userDetails: userDetailsReducer,
-  Progress : progressReducer,
-  Page:setPage,
-  Photo:setPhoto,
-  
+  basic: userDetailsReducer,
+  education: educationDetailsReducer,
+  skills: skillsDetailsReducer,
+  Projects: projectsDetailsReducer,
+  Experience: experienceDetailsReducer,
+  InternShip: intenshipDetailsReducer,
+  Certificates: certificatesDetailsReducer,
+  Languages: languagesDetailsReducer,
+  SocialLinks: socialLinksDetailsReducer,
+  Progress: progressReducer,
+  Photo: setPhoto,
 });
 
 const store = createStore(rootReducer);

@@ -1,0 +1,20 @@
+{
+   "Normal":{
+        "type": "Normal",
+        "image:":"",
+        "info": "The Normal Resume",
+        "description": "serves as a foundational document, structured conventionally into sections delineating education, experience, and skills. It follows a standardized format, employing common fonts and bullet points for clarity. Typically aimed at entry-level positions, it abstains from elaborate designs or creative elements, focusing on presenting information succinctly. Its simplicity makes it universally accepted and easily comprehensible to recruiters. While it lacks innovation, it remains a reliable tool for traditional industries valuing professionalism and adherence to established norms. Despite its simplicity, crafting a normal resume requires attention to detail, ensuring an objective, professional tone throughout its content, making it suitable for various job applications across different sectors."
+    },
+    "Ninja":{
+        "type": "Ninja",
+        "image:":"",
+        "info": "Colored templates",
+        "description": "thrives on creativity, presenting information in unconventional ways to captivate attention. Employing visually appealing designs, infographics, and storytelling techniques, it communicates achievements in a manner that's both impactful and memorable. Targeted toward specific job roles, it showcases digital prowess and results-oriented achievements with a tech-savvy approach. Its adaptive nature allows for constant evolution to align with changing job market trends. This type of resume serves not only as a professional tool but also as a personal branding and networking asset, leaving a lasting impression due to its unique and engaging elements."
+    },
+    "Pro":{
+        "type": "Pro",
+        "image:":"",
+        "info": "Additional features",
+        "description": "is a strategic masterpiece, meticulously tailored to specific job applications or industries. Its content is comprehensive and detailed, focusing on achievements, career progression, and industry-specific keywords. Using advanced formatting techniques, it ensures readability and clarity, presenting achievements with quantifiable data and strategic language that highlights leadership abilities. Ideal for executives and specialists, this resume showcases a depth of experience, strategic vision, and a clear growth trajectory. Often complemented by a robust LinkedIn profile, it serves as a consultant or specialist's tool, effectively communicating expertise, achievements, and professional growth to a discerning audience."
+    }
+}

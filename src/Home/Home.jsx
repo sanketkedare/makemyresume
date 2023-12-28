@@ -1,23 +1,43 @@
 import React from "react";
-import HomeProcess from "./HomeProcess";
 import HomeNav from "./HomeNav";
 import HomeMessage from "./HomeMessage";
+import "./home.css"
+
+
+import HomeProcess from "./HomeProcess";
 import HomeProducts from "./HomeProducts";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeFooter from "./HomeFooter";
 
 // Home Page Component
 const Home = () => {
+  return (
+    <div id="home">
+      <HomeNav />
 
-    return (
-    <section className="bg-black lg:w-full w-[120vw]" >
-      <HomeNav/>
-      <HomeMessage />
-      <HomeProcess />
-      <HomeProducts />
-      <HomeAboutUs />
-      <HomeFooter />
-    </section>
+     <section>
+        <HomeMessage />
+      </section> 
+
+      
+      <section>
+        <HomeProcess />
+      </section>
+
+      
+      <section>
+        <HomeProducts />
+      </section>
+
+      <section>
+        <HomeAboutUs />
+      </section>
+
+
+      <section>
+        <HomeFooter />
+      </section>
+    </div>
   );
 };
 

@@ -1,4 +1,16 @@
-import { PROGRESS, SET_DETAILS_PAGE, SET_PHOTO, SET_RESUME_DETAILS } from "./Constants";
+import {
+  PROGRESS,
+  SET_CERTIFICATES,
+  SET_EDUCATION_DETAILS,
+  SET_EXPERIENCE_DETAILS,
+  SET_INTENSHIP_DETAILS,
+  SET_LANGUAGES,
+  SET_PHOTO,
+  SET_PROJECTS,
+  SET_RESUME_DETAILS,
+  SET_SKILLS,
+  SET_SOCIAL_LINKS,
+} from "./Constants";
 
 export const progressReducer = (state = 0, action) => {
   switch (action.type) {
@@ -11,16 +23,14 @@ export const progressReducer = (state = 0, action) => {
 };
 
 const initialData = {
-  firstName: "First Name",
-  lastName: "Lastname",
-  mobile: " mobile",
-  email: "email",
-  dob: "dob",
-  city: "city",
-  password: "password",
-  about: "about",
-  objective: "objective",
-  profile: "Job Profile",
+  name: "",
+  mobile: "",
+  email: "",
+  dob: "",
+  city: "",
+  about: "",
+  objective: "",
+  job: "",
 };
 
 export const userDetailsReducer = (state = initialData, action) => {
@@ -28,37 +38,108 @@ export const userDetailsReducer = (state = initialData, action) => {
     case SET_RESUME_DETAILS:
       return {
         ...state,
-        firstName: action.payload.firstName,
-        lastName: action.payload.lastName,
+        name: action.payload.name,
         mobile: action.payload.mobile,
         email: action.payload.email,
         dob: action.payload.dob,
         city: action.payload.city,
         objective: action.payload.objective,
         about: action.payload.about,
-        profile:action.payload.profile,
+        job: action.payload.job,
       };
     default:
       return state;
   }
 };
 
-export const setPhoto = (state = "", action)=>{
-  if(action.type === SET_PHOTO)
-  {
+export const educationDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_EDUCATION_DETAILS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const skillsDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_SKILLS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const projectsDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_PROJECTS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const experienceDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_EXPERIENCE_DETAILS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const intenshipDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_INTENSHIP_DETAILS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const certificatesDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_CERTIFICATES:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export const languagesDetailsReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_LANGUAGES:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+const socialLiks = {
+  linkedin: "",
+  github: "",
+  portfollio: "",
+  other: "",
+};
+
+export const socialLinksDetailsReducer = (state = socialLiks, action) => {
+  switch (action.type) {
+    case SET_SOCIAL_LINKS:
+      return {
+        ...state,
+        linkedin: action.payload.linkedin,
+        github: action.payload.github,
+        portfollio: action.payload.portfollio,
+        other: action.payload.other,
+      };
+    default:
+      return state;
+  }
+};
+
+export const setPhoto = (state = "", action) => {
+  if (action.type === SET_PHOTO) {
     return action.payload.photo;
   }
   return state;
-}
-
-export const setPage = (state = "BasicDetails", action) => {
-  if (action.type === SET_DETAILS_PAGE) 
-  {
-    return action.payload;
-  } 
-  
-  else 
-  {
-    return state;
-  }
 };

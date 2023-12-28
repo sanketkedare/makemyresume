@@ -1,0 +1,11 @@
+*{
+    background-color: black;
+}
+
+#homeMassage{
+    height: calc(100vh - 70px);
+}
+
+.active{
+    background-color: rgba(158, 29, 29, 0.2);
+}
