@@ -51,32 +51,32 @@ const Certification = () => {
   };
 
   return (
-    <div id="certificates">
-      <div className="container my-3 px-4 text-sm">
-        <div className="flex my-4 p-2 items-center">
-          <h1>Q. Do you have any certification ?</h1>
+    <div id="certificates" className="bg-transparent">
+      <div className="container my-3 p-4 text-sm bg-black rounded-2xl">
+        <div className="flex my-4 p-2 items-center bg-transparent">
+          <h1 className="bg-transparent">Q. Do you have any certification ?</h1>
           <select
             onChange={handlecertificatesChange}
-            className="mx-3 border-2 border-sky-400 px-3 py-2 rounded-2xl"
+            className="mx-3 border-2 border-sky-400 px-3 py-2 rounded-2xl bg-black"
           >
-            <option value="NO">No</option>
-            <option value="YES">Yes</option>
+            <option value="NO" className="bg-black text-white">No</option>
+            <option value="YES" className="bg-black text-white">Yes</option>
           </select>
         </div>
         {iscertificates ? (
-          <div>
+          <div className="bg-transparent">
             {data && <CertificateData/>}
             {certificates.map((c,index)=>(
-              <table key={index} style={{ width: "100%" }}>
-                <h1 className="bg-yellow-400 text-black p-3 font-bold rounded-2xl border-2 mt-5 border-white">
-                  Certificate {index + 1}
+              <table key={index} style={{ width: "100%" }} className="bg-transparent my-3">
+                <h1 className="bg-sky-400 text-black p-3 font-bold rounded-2xl border-2 border-white w-[120px] text-sm text-center">
+                  Certificate {index + 1}:
                 </h1>
-                <tbody>
-                <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Name : </lable>
+                <tbody className="bg-transparent">
+                <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="name" className="bg-transparent">Name : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="name"
@@ -87,11 +87,11 @@ const Certification = () => {
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Organization : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">Organization : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="organization"
@@ -103,11 +103,11 @@ const Certification = () => {
                     </td>
                   </tr>
 
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Description : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">Description : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <textarea
                         type="text"
                         name="description"
@@ -122,14 +122,14 @@ const Certification = () => {
                 </tbody>
               </table>
             ))}
-            <button className="bg-yellow-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400"
+            <button className="bg-sky-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400 w-[200px] my-3"
                      onClick={addcertificates}>
-              Add More Exprerience
+              Add More Certificates
             </button>
           </div>
         ) : (
-          <div>
-            <h1>You can Save and Move to Next Section</h1>
+          <div className="bg-transparent flex items-center justify-center my-2 bg-green-300 text-black p-2 rounded-3xl font-bold">
+            <h1 className="bg-transparent text-black text-center">You can Save and Move to Next Section</h1>
           </div>
         )}
 

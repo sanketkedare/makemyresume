@@ -12,6 +12,7 @@ import {
   SET_CERTIFICATES,
   SET_LANGUAGES,
   SET_SOCIAL_LINKS,
+  SET_TEMPLATE,
 } from "./Constants";
 
 export const progress = (Percentage) => {
@@ -90,3 +91,11 @@ export const setMyPhoto = (photo) => {
     payload: photo,
   };
 };
+
+
+export const seTemplate = (template) => {
+  return {
+    type: SET_TEMPLATE,
+    payload: template,
+  };
+}

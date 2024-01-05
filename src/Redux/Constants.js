@@ -21,4 +21,5 @@ export const SET_SOCIAL_LINKS = "SET_SOCIAL_LINKS";
 
 export const SET_PHOTO = "SET_PHOTO";
 
+export const SET_TEMPLATE = "SET_TEMPLATE";
 

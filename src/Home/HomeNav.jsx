@@ -7,7 +7,7 @@ const HomeNav = () => {
       {/* Home Navbar */}
       <div className="flex w-full p-3 bg-black h-[70px] text-white">
 
-        <h1 className="flex items-center lg:text-lg font-bold relative">
+        <h1 className="flex items-center lg:text-lg font-bold relative bg-transparent">
           <TfiWrite className="mx-4" />
           Make My Resume
         </h1>

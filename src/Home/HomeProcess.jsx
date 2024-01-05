@@ -5,13 +5,13 @@ const HomeProcess = () => {
   return (
     <div className="h-[100vh] p-4 bg-[#091f1f2a] ">
       {/* Proccess */}
-      <div className="rounded-xl border-2 border-sky-600 h-[100%]">
-        <h1 className="text-white text-center font-bold text-[40px] my-10">
+      <div className="rounded-xl border-2 border-sky-600 h-[100%] bg-black">
+        <h1 className="text-white text-center font-bold text-[40px] my-10 bg-transparent">
           How to use ?
         </h1>
 
-        <div className="flex justify-center items-center h-[20%]">
-          <div className="flex text-white justify-evenly items-center lg:w-[70%]">
+        <div className="flex justify-center items-center h-[20%] bg-transparent">
+          <div className="flex text-white justify-evenly items-center lg:w-[70%] bg-transparent">
             <div
               className=" lg:w-[200px]  w-[100px] 
                             bg-gradient-to-r from-violet-800 to-blue-600 
@@ -54,8 +54,8 @@ const HomeProcess = () => {
           </div>
         </div>
 
-        <div className="w-[80%] h-[50%] flex justify-center items-start m-auto overflow-y-auto py-5">
-          <p className="text-justify">
+        <div className="w-[80%] h-[50%] flex justify-center items-start m-auto overflow-y-auto py-5 bg-transparent">
+          <p className="text-justify bg-transparent p-5 text-white">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
             voluptatibus dolorum sunt cum pariatur atque commodi iure cupiditate
             tenetur saepe odit quibusdam, animi ipsum facilis ullam rem? Fugiat,

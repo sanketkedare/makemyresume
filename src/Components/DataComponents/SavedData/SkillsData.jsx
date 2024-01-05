@@ -5,15 +5,15 @@ const SkillsData = () => {
   const data = useSelector((state) => state.skills);
   console.log("Skills: ", data);
   return (
-    <div>
-      <div className="flex items-center">
-        <h1>Skills :</h1>
+    <div className="flex items-center bg-transparent lg:h-[50px] h-[100px] overflow-x-auto">
+      <div className="flex items-center bg-transparent">
+        <h1 className="bg-transparent">Skills :</h1>
         {data.map((s, i) => (
           <h1
             key={i}
-            className="bg-orange-400 font-bold text-black p-3 mx-2 rounded-2xl border-2 border-white"
+            className="bg-orange-400 font-bold text-black p-3 mx-2 rounded-2xl border-2 border-white w-auto"
           >
-            {s.skill} - {s.proficiency}
+            {s.skill}
           </h1>
         ))}
       </div>

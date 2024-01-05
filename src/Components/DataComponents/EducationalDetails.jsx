@@ -39,20 +39,20 @@ const EducationalDetails = () =>
 
 
   return (
-    <div id="education" className="">
-      <div className="container  my-3 px-4 text-sm">
+    <div id="education" className="bg-transparent">
+      <div className="container bg-black p-4 text-sm rounded-2xl">
         {Data && <Education/>}
         {education.map((edu, index) => (
-          <table style={{ width: "100%" }}>
-            <h1 className="bg-yellow-400 text-black p-3 font-bold rounded-2xl border-2 border-white">
+          <table style={{ width: "100%" }} className="bg-transparent">
+            <h1 className="bg-sky-400 text-black p-2 my-2 font-bold rounded-2xl border-2 border-white w-[150px] text-center">
               Education {index + 1}
             </h1>
-            <tbody>
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="qualification">Qualification :</label>
+            <tbody className="bg-transparent">
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="qualification" className="bg-transparent">Qualification :</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="qualification"
@@ -64,11 +64,11 @@ const EducationalDetails = () =>
                 </td>
               </tr>
 
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="university">University :</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="university" className="bg-transparent">University :</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="university"
@@ -80,11 +80,11 @@ const EducationalDetails = () =>
                   />
                 </td>
               </tr>
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="feild">Feild of Study :</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="feild" className="bg-transparent">Feild of Study :</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="feild"
@@ -97,11 +97,11 @@ const EducationalDetails = () =>
                 </td>
               </tr>
 
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="passoutYear">Passout Year:</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="passoutYear" className="bg-transparent">Passout Year:</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="passoutYear"
@@ -114,11 +114,11 @@ const EducationalDetails = () =>
                 </td>
               </tr>
 
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="grade">Grade:</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="grade" className="bg-transparent">Grade:</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="grade"
@@ -136,13 +136,13 @@ const EducationalDetails = () =>
 
         <button
           onClick={addEducation}
-          className="bg-yellow-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400"
+          className="bg-sky-400 text-black p-3 my-3 font-bold rounded-2xl hover:bg-red-400 w-[200px]"
         >
-          Add Education
+          Add More Education
         </button>
         <button
           className="flex justify-center items-center border-2 border-sky-400 w-full 
-                         bg-green-600 p-3 my-3 font-bold rounded-2xl 
+                         bg-green-600 p-3 my-5 font-bold rounded-2xl 
                          hover:bg-sky-400 hover:text-black"
           onClick={onSubmit}
         >

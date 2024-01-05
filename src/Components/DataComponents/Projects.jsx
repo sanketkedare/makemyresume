@@ -35,21 +35,21 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects">
-      <div className="container my-3 px-4 text-sm">
+    <div id="projects" className="bg-transparent">
+      <div className="container p-4 text-sm bg-black rounded-2xl">
         {Data && <ProjectsData />}
         {projects.map((p, index) =>(
-          <table style={{ width: "100%" }}>
-            <h1 className="bg-yellow-400 text-black p-3 font-bold rounded-2xl border-2 mt-5 border-white">
-              Project {index + 1}
+          <table style={{ width: "100%" }} className="bg-transparent">
+            <h1 className="bg-sky-400 text-sm w-[100px] text-center mt-3 text-black p-3 font-bold rounded-2xl border-2 border-white">
+              Project {index + 1}:
             </h1>
 
-            <tbody>
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="title">Title :</label>
+            <tbody className="bg-transparent">
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="title" className="bg-transparent">Title :</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="title"
@@ -60,11 +60,11 @@ const Projects = () => {
                   />
                 </td>
               </tr>
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="organization"> Organization:</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="organization" className="bg-transparent"> Organization:</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="organization"
@@ -76,11 +76,11 @@ const Projects = () => {
                 </td>
               </tr>
 
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="skill"> Skills Used:</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="skill" className="bg-transparent"> Skills Used:</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="skill"
@@ -92,11 +92,11 @@ const Projects = () => {
                 </td>
               </tr>
 
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="description"> Description:</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="description" className="bg-transparent"> Description:</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <textarea
                     type="text"
                     name="description"
@@ -108,11 +108,11 @@ const Projects = () => {
                 </td>
               </tr>
 
-              <tr>
-                <th style={{ width: "10%", textAlign: "left" }}>
-                  <label htmlFor="date">Complition Date:</label>
+              <tr className="bg-transparent">
+                <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                  <label htmlFor="date" className="bg-transparent">Complition Date:</label>
                 </th>
-                <td>
+                <td className="bg-transparent">
                   <input
                     type="text"
                     name="date"
@@ -129,7 +129,7 @@ const Projects = () => {
         ))}
         <button
           onClick={addProject}
-          className="bg-yellow-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400"
+          className="bg-sky-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400 w-[200px] my-3"
         >
           Add More Project
         </button>

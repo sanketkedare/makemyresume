@@ -55,33 +55,33 @@ const Internship = () =>
     }
   };
   return (
-    <div id="internship">
-      <div className="container my-3 px-4 text-sm">
-        <div className="flex my-4 p-2 items-center">
-          <h1>Q. Have you done any Internship ?</h1>
+    <div id="internship" className="bg-transparent">
+      <div className="container my-3 p-4 text-sm bg-black rounded-2xl">
+        <div className="flex my-4 p-2 items-center bg-transparent">
+          <h1 className="bg-transparent">Q. Have you done any Internship ?</h1>
           <select
             onChange={handleInternShipChange}
-            className="mx-3 border-2 border-sky-400 px-3 py-2 rounded-2xl"
+            className="mx-3 border-2 border-sky-400 px-3 py-2 rounded-2xl bg-black"
           >
-            <option value="NO">No</option>
-            <option value="YES">Yes</option>
+            <option value="NO" className="bg-transparent">No</option>
+            <option value="YES" className="bg-transparent">Yes</option>
           </select>
         </div>
         {isInternShip ? (
-          <div>
+          <div className="bg-transparent">
             {data && <InternShipData/>}
 
             {internShip.map((e, index) => (
-              <table key={index} style={{ width: "100%" }}>
-                <h1 className="bg-yellow-400 text-black p-3 font-bold rounded-2xl border-2 mt-5 border-white">
-                  Internship {index + 1}
+              <table key={index} style={{ width: "100%" }} className="bg-transparent">
+                <h1 className="bg-sky-400 text-black p-2 font-bold rounded-2xl border-2 border-white text-sm w-[150px] text-center">
+                  Internship {index + 1}:
                 </h1>
-                <tbody>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Position : </lable>
+                <tbody className="bg-transparent">
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">Position : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="position"
@@ -92,11 +92,11 @@ const Internship = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Organization : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">Organization : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="organization"
@@ -107,11 +107,11 @@ const Internship = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Total Period : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">Total Period : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="totalPeriod"
@@ -122,11 +122,11 @@ const Internship = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">Description : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">Description : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <textarea
                         type="text"
                         name="description"
@@ -137,11 +137,11 @@ const Internship = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor="">From Date - Till Date : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor="" className="bg-transparent">From Date - Till Date : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="date"
@@ -155,20 +155,20 @@ const Internship = () =>
                 </tbody>
               </table>
             ))}
-            <button className="bg-yellow-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400"
+            <button className="bg-sky-400 text-black p-3 my-4 font-bold rounded-2xl hover:bg-red-400 w-[200px]"
                      onClick={addInternShip}>
-              Add More Exprerience
+              Add More 
             </button>
           </div>
         ) : (
-          <div>
-            <h1>You can Save and Move to Next Section</h1>
+          <div className="bg-transparent flex items-center justify-center my-2 bg-green-300 text-black p-2 rounded-3xl font-bold">
+            <h1 className="bg-transparent text-black text-center">You can Save and Move to Next Section</h1>
           </div>
         )}
 
        <button
           className="flex justify-center items-center border-2 border-sky-400 w-full 
-                         bg-green-600 p-3 my-3 font-bold rounded-2xl 
+                         bg-green-600 p-3 my-5 font-bold rounded-2xl 
                          hover:bg-sky-400 hover:text-black"
           onClick={onSave}
         >

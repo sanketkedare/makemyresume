@@ -34,16 +34,16 @@ const BasicDetails = () =>
   };
 
   return (
-    <div id="basicDetails" className="">
+    <div id="basicDetails" className="bg-transparent">
       {/* Actual Data Component */}
-      <div className="container  my-3 px-4 text-sm">
-        <table style={{ width: "100%" }}>
-          <tbody>
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="name">Name:</label>
+      <div className="container  my-3 px-4 text-sm bg-black p-4 rounded-2xl shadow-lg">
+        <table style={{ width: "100%" }} className="bg-transparent">
+          <tbody className="bg-transparent p-5">
+            <tr className="bg-transparent p-5">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="name" className="bg-transparent">Name:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="name"
@@ -56,11 +56,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="mobile">Mobile:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="mobile" className="bg-transparent">Mobile:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="number"
                   name="mobile"
@@ -73,11 +73,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="email">Email:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="email" className="bg-transparent">Email:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="email"
                   name="email"
@@ -90,11 +90,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="dob">Birth Date:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="dob" className="bg-transparent">Birth Date:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="date"
                   name="dob"
@@ -107,11 +107,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="city">City:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="city" className="bg-transparent">City:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="city"
@@ -124,11 +124,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="job">Job:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="job" className="bg-transparent">Job:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="job"
@@ -141,11 +141,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="about">About You:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="about" className="bg-transparent">About You:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <textarea
                   placeholder="About"
                   name="about"
@@ -157,11 +157,11 @@ const BasicDetails = () =>
               </td>
             </tr>
 
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="objective">Carear Objective:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="objective" className="bg-transparent">Carear Objective:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <textarea
                   placeholder="Carear Objective"
                   name="objective"
@@ -177,7 +177,7 @@ const BasicDetails = () =>
 
         <button
           className="flex justify-center items-center border-2 border-sky-400 w-full 
-                         bg-green-600 p-3 my-3 font-bold rounded-2xl 
+                         bg-green-600 p-3 my-5 font-bold rounded-2xl 
                          hover:bg-sky-400 hover:text-black"
           onClick={onSubmitt}
         >

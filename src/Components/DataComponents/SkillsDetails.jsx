@@ -32,18 +32,18 @@ const SkillsDetails = () =>
   };
 
   return (
-    <div id="skills" className="">
-      <div className="container my-3 px-4 text-sm">
+    <div id="skills" className="bg-transparent">
+      <div className="container my-3 p-4 text-sm bg-black rounded-2xl">
         {data && <SkillsData/>}
         {skill.map((s,index)=>(
-        <div key={index}>
+        <div key={index} className="bg-transparent my-3">
           
-          <div className="flex col-3 gap-2">
+          <div className="flex col-3 gap-2 bg-transparent">
             <input
               type="text"
               placeholder={`Skill ${index+1}:`}
               name="skill"
-              className="border-2 border-sky-400 w-[30%] p-3 rounded-2xl my-2"
+              className="border-2 border-sky-400 lg:w-[30%] p-3 rounded-2xl my-2"
               onChange={(e) => setSkillFields(index,e)}
               value={skill[index].skill}
             />
@@ -61,7 +61,7 @@ const SkillsDetails = () =>
         ))}
 
         <button
-          className="bg-sky-400 text-black p-3 mx-2 font-bold rounded-2xl hover:bg-red-400"
+          className="bg-sky-400 text-black p-3 mx-2 font-bold rounded-2xl hover:bg-red-400 w-[200px] my-3"
           onClick={addSkill}
         >
           Add More Skill

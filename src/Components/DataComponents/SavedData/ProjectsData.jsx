@@ -7,15 +7,15 @@ const Projects = () =>
   console.log(data);
 
   return (
-    <div className='flex justify-evenly items-center w-full h-full my-4'>
+    <div className='flex justify-evenly my-3 items-center w-full h-full bg-transparent'>
         {data.map((project,index)=>(
-            <div key={index} className='w-[50%] p-4 border-2 border-blue-400  text-black rounded-2xl'>
-                <h1>Project {index + 1}</h1>
-                <h2>Title : {project.title}</h2>
-                <h3>Skills Used : {project.skill}</h3>
-                <h3>Organisation : {project.organization}</h3>
-                <h3>Date : {project.date}</h3>
-                <h3>Description : {project.description}</h3>
+            <div key={index} className='w-[100%] p-4 border-2 border-blue-400   rounded-2xl bg-transparent'>
+                <h1 className="bg-transparent">Project {index + 1}</h1>
+                <h2 className="bg-transparent">Title : {project.title}</h2>
+                <h3 className="bg-transparent">Skills Used : {project.skill}</h3>
+                <h3 className="bg-transparent">Organisation : {project.organization}</h3>
+                <h3 className="bg-transparent">Date : {project.date}</h3>
+                <h3 className="bg-transparent">Description : {project.description}</h3>
             </div>
         ))}
     </div>

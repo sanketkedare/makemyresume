@@ -9,8 +9,8 @@ const HomeProducts = () => {
     <div className="h-[100vh] p-4 bg-[#091f1f2a]">
       
       {/* Products */}
-      <div className="p-10 border-2 border-sky-700 rounded-3xl shadow-xl h-[100%]">
-        <div className="buttons flex justify-center items-center">
+      <div className="p-10 border-2 border-sky-700 rounded-3xl shadow-xl h-[100%] bg-black">
+        <div className="buttons flex justify-center items-center bg-transparent">
           <button
             className={`py-3 rounded-xl border-2 border-gray-50 text-center font-bold bg-sky-500 m-2 text-white lg:w-[100px] w-[75px] lg:text-sm ${
               typeR === "Normal" ? "active" : "" // Conditionally add active class

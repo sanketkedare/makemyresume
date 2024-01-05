@@ -12,10 +12,10 @@ import HomeFooter from "./HomeFooter";
 // Home Page Component
 const Home = () => {
   return (
-    <div id="home">
+    <div id="home" className="bg-transparent">
       <HomeNav />
 
-     <section>
+     <section >
         <HomeMessage />
       </section> 
 

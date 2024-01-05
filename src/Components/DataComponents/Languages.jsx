@@ -34,13 +34,13 @@ const Languages = () =>
   };
 
   return (
-    <div id="skills" className="">
-      <div className="container my-3 px-4 text-sm">
+    <div id="skills" className="bg-transparent">
+      <div className="container my-3 p-4 text-sm bg-black rounded-2xl">
         {data && <LanguageData/>}
         {language.map((lan,index)=>(
-        <div key={index}>
+        <div key={index}  className="bg-transparent">
           
-          <div className="flex col-3 gap-2">
+          <div className="flex col-3 gap-2 bg-transparent">
             <input
               type="text"
               placeholder={`Language ${index+1}:`}
@@ -54,7 +54,7 @@ const Languages = () =>
               type="text"
               placeholder="Proficiency in %"
               name="proficiency"
-              className="border-2 border-sky-400 w-[30%] p-3 rounded-2xl my-2"
+              className="border-2 border-sky-400 lg:w-[30%] p-3 rounded-2xl my-2"
               onChange={(e) => setlanguageFields(index,e)}
               value={language[index].proficiency}
             />
@@ -63,15 +63,19 @@ const Languages = () =>
         ))}
 
         <button
-          className="bg-sky-400 text-black p-3 mx-2 font-bold rounded-2xl hover:bg-red-400"
+          className="bg-sky-400 text-black p-3 mx-2 font-bold rounded-2xl hover:bg-red-400 my-3 w-[200px]"
           onClick={addlanguage}
         >
-          Add More Language
+          Add More Languages
         </button>
+
+        <div className="bg-transparent flex items-center justify-center my-2 bg-green-300 text-black p-2 rounded-3xl font-bold">
+            <h1 className="bg-transparent text-black text-center">You can Save and Move to Next Section</h1>
+          </div>
 
         <button
           className="flex justify-center items-center border-2 border-sky-400 w-full 
-                         bg-green-600 p-3 my-3 font-bold rounded-2xl 
+                         bg-green-600 p-3 my-5 font-bold rounded-2xl 
                          hover:bg-sky-400 hover:text-black"
           onClick={onSubmit}
         >

@@ -28,15 +28,15 @@ const Social = () => {
   };
 
   return (
-    <div id="socialDetails" className="">
-      <div className="container  my-3 px-4 text-sm">
-        <table style={{ width: "100%" }}>
-          <tbody>
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="name">Github:</label>
+    <div id="socialDetails" className="bg-transparent">
+      <div className="container  my-3 p-4 bg-black rounded-2xl text-sm">
+        <table style={{ width: "100%" }} className="bg-transparent">
+          <tbody className="bg-transparent">
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="name" className="bg-transparent">Github:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="github"
@@ -48,11 +48,11 @@ const Social = () => {
                 />
               </td>
             </tr>
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="name">LinkedIn:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="name" className="bg-transparent">LinkedIn:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="linkedin"
@@ -64,11 +64,11 @@ const Social = () => {
                 />
               </td>
             </tr>
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="name">Portfolio:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="name" className="bg-transparent">Portfolio:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="portfollio"
@@ -80,11 +80,11 @@ const Social = () => {
                 />
               </td>
             </tr>
-            <tr>
-              <th style={{ width: "10%", textAlign: "left" }}>
-                <label htmlFor="name">Other:</label>
+            <tr className="bg-transparent">
+              <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                <label htmlFor="name" className="bg-transparent">Other:</label>
               </th>
-              <td>
+              <td className="bg-transparent">
                 <input
                   type="text"
                   name="other"
@@ -98,9 +98,12 @@ const Social = () => {
             </tr>
           </tbody>
         </table>
+        <div className="bg-transparent flex items-center justify-center my-2 bg-green-300 text-black p-2 rounded-3xl font-bold">
+            <h1 className="bg-transparent text-black text-center">You can Save and Move to Next Section</h1>
+          </div>
         <button
           className="flex justify-center items-center border-2 border-sky-400 w-full 
-                         bg-green-600 p-3 my-3 font-bold rounded-2xl 
+                         bg-green-600 p-3 my-5 font-bold rounded-2xl 
                          hover:bg-sky-400 hover:text-black"
           onClick={onSave}
         >

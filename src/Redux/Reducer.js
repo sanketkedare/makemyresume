@@ -10,6 +10,7 @@ import {
   SET_RESUME_DETAILS,
   SET_SKILLS,
   SET_SOCIAL_LINKS,
+  SET_TEMPLATE,
 } from "./Constants";
 
 export const progressReducer = (state = 0, action) => {
@@ -143,3 +144,13 @@ export const setPhoto = (state = "", action) => {
   }
   return state;
 };
+
+
+export const seTemplateReducer = (state = "", action) => {
+  switch (action.type) {
+    case SET_TEMPLATE:
+      return action.payload;
+    default:
+      return state;
+  }
+}

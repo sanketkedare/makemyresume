@@ -7,6 +7,7 @@ import {
   languagesDetailsReducer,
   progressReducer,
   projectsDetailsReducer,
+  seTemplateReducer,
   setPhoto,
   skillsDetailsReducer,
   socialLinksDetailsReducer,
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
   SocialLinks: socialLinksDetailsReducer,
   Progress: progressReducer,
   Photo: setPhoto,
+  Template: seTemplateReducer,
 });
 
 const store = createStore(rootReducer);

@@ -56,34 +56,34 @@ const Experience = () =>
   };
 
   return (
-    <div id="Experience">
-      <div className="container my-3 px-4 text-sm">
-        <div className="flex my-4 p-2 items-center">
-          <h1>Q. Are you Fresher or Experienced ?</h1>
+    <div id="Experience bg-black">
+      <div className="container my-3 p-4 text-sm bg-black rounded-xl border-2 border-black">
+        <div className="flex my-4 p-2 items-center bg-transparent">
+          <h1 className="bg-transparent">Q. Are you Fresher or Experienced ?</h1>
           <select
             onChange={handleExperienceChange}
-            className="mx-3 border-2 border-sky-400 px-3 py-2 rounded-2xl"
+            className="mx-3 border-2 border-sky-400 px-3 py-2 rounded-2xl bg-black"
           >
-            <option value="fresher">Fresher</option>
+            <option value="fresher" className="bg-black">Fresher</option>
             <option value="experienced">Experienced</option>
           </select>
         </div>
 
         {isExperienced ? (
-          <div>
+          <div className="bg-inherit">
             {data && <ExperienceData />}
 
             {experience.map((e, index) => (
-              <table key={index} style={{ width: "100%" }}>
-                <h1 className="bg-yellow-400 text-black p-3 font-bold rounded-2xl border-2 mt-5 border-white">
-                  Experience {index + 1}
-                </h1>
-                <tbody>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor = ''>Position : </lable>
+              <table key={index} style={{ width: "100%" }} className="bg-transparent my-5">
+                <h5 className="bg-sky-400 text-sm w-[150px] text-black p-3 font-bold rounded-2xl border-2 text-center border-white">
+                  Experience {index + 1}:
+                </h5>
+                <tbody className="bg-transparent">
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor = '' className="bg-transparent">Position : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="position"
@@ -94,11 +94,11 @@ const Experience = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor = ''>Organization : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor = '' className="bg-transparent">Organization : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="organization"
@@ -109,11 +109,11 @@ const Experience = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor = ''>Total Experience : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor = '' className="bg-transparent">Total Experience : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="totalexperience"
@@ -125,11 +125,11 @@ const Experience = () =>
                     </td>
 
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor = ''>Description : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor = '' className="bg-transparent">Description : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <textarea
                         type="text"
                         name="description"
@@ -140,11 +140,11 @@ const Experience = () =>
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <th style={{ width: "10%", textAlign: "left" }}>
-                      <lable htmlFor = ''>From Date - Till Date : </lable>
+                  <tr className="bg-transparent">
+                    <th style={{ width: "10%", textAlign: "left" }} className="bg-transparent">
+                      <lable htmlFor = '' className="bg-transparent">From Date - Till Date : </lable>
                     </th>
-                    <td>
+                    <td className="bg-transparent">
                       <input
                         type="text"
                         name="date"
@@ -159,20 +159,20 @@ const Experience = () =>
               </table>
             ))}
 
-            <button className="bg-yellow-400 text-black p-3 font-bold rounded-2xl hover:bg-red-400"
+            <button className="bg-sky-400 w-[200px] text-black p-3 my-3 font-bold rounded-2xl hover:bg-red-400"
                      onClick={addExperience}>
               Add More Exprerience
             </button>
           </div>
         ) : (
-          <div>
-            <h1>You can Save and Move to Next Section</h1>
+          <div className="bg-transparent flex items-center justify-center my-2 bg-green-300 text-black p-2 rounded-3xl font-bold">
+            <h1 className="bg-transparent text-black text-center">You can Save and Move to Next Section</h1>
           </div>
         )}
 
         <button
           className="flex justify-center items-center border-2 border-sky-400 w-full 
-                         bg-green-600 p-3 my-3 font-bold rounded-2xl 
+                         bg-green-600 p-3 my-5 font-bold rounded-2xl 
                          hover:bg-sky-400 hover:text-black"
           onClick={onSave}
         >
