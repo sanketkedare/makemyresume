@@ -1,6 +1,12 @@
-# Make-My-Resume
+** Make My Resume **
 
-React based Project with Tailwind css support
+# About Project
+
+## Technologies Used
+- React JS
+- Tailwind CSS
+- Redux
+
 
 ## Available Scripts
 
