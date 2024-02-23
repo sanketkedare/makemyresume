@@ -1,6 +1,7 @@
 import React from "react";
 import productDetails from "./Products.json";
 import { BsArrowRightCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Products = ({ typeR }) => {
   const normalResume = productDetails[typeR];
@@ -21,11 +22,12 @@ const Products = ({ typeR }) => {
              {normalResume.description}
         </div>
         
-
+        <Link to={"/templates"} className="bg-transparent">
         <button className="flex  justify-center items-center border-2 border-white bg-red-900 my-10 p-3 rounded-3xl ">
           See Templates 
           <BsArrowRightCircleFill className="bg-red-900 mx-2 bg-transparent" />
         </button>
+        </Link>
 
       </div>
 

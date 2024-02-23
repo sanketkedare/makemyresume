@@ -8,9 +8,7 @@ import { Link } from "react-router-dom";
 const Download = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state);
-  const template = useSelector(
-    (state) => state.Template || "No Data Available"
-  );
+  const template = useSelector((state) => state.Template || "No Data Available");
   const [includeDOB, setIncludeDOB] = useState(true);
   const [grade, setIncludeGrade] = useState(true);
   const [projectdate, setProjectDate] = useState(true);
@@ -18,12 +16,11 @@ const Download = () => {
   const [lang, setLang] = useState(true);
   const [photo, setPhoto] = useState(true);
   const [dropdown, setDropdown] = useState(false);
-
   const [create, setCreate] = useState(false);
-
   const [selections, setSelection] = useState();
 
-  const onCreate = () => {
+  const onCreate = () => 
+  {
     setCreate(true);
     setSelection({
       includeDOB,
@@ -31,8 +28,7 @@ const Download = () => {
       photo,
       certification,
       lang,
-      projectdate,
-    });
+      projectdate});
     console.log(selections);
   };
 

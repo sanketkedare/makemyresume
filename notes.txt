@@ -1,0 +1,39 @@
+import React, { useRef, useState } from "react";
+import Left from "./Left";
+import Right from "./Right";
+import { useReactToPrint } from "react-to-print";
+
+const Main = () => {
+  const [downloadShow, setDownloadShow] = useState(false);
+
+  const componentPdf = useRef();
+  const genratePDF = useReactToPrint({
+    content: () => componentPdf.current,
+    documentTitle: "Resume",
+  });
+
+  return (
+    <>
+      {downloadShow && (
+        <div className="absolute flex justify-center bg-transparent">
+          <h1 className="text-black bg-gray-400" onClick={() => genratePDF()}>
+            Download
+          </h1>
+        </div>
+      )}
+      <div
+        className="flex p-1 mx-auto bg-transparent"
+        ref={componentPdf}
+        onMouseEnter={() => setDownloadShow(true)}
+        onMouseLeave={() => setDownloadShow(false)}
+      >
+        {/* Left Section */}
+        <Left />
+        {/* Right Section */}
+        <Right />
+      </div>
+    </>
+  );
+};
+
+export default Main;
