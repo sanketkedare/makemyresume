@@ -1,9 +1,8 @@
 import React from "react";
+import "./home.css";
+
 import HomeNav from "./HomeNav";
 import HomeMessage from "./HomeMessage";
-import "./home.css"
-
-
 import HomeProcess from "./HomeProcess";
 import HomeProducts from "./HomeProducts";
 import HomeAboutUs from "./HomeAboutUs";
@@ -15,16 +14,14 @@ const Home = () => {
     <div id="home" className="bg-transparent">
       <HomeNav />
 
-     <section >
+      <section>
         <HomeMessage />
-      </section> 
+      </section>
 
-      
       <section>
         <HomeProcess />
       </section>
 
-      
       <section>
         <HomeProducts />
       </section>
@@ -32,7 +29,6 @@ const Home = () => {
       <section>
         <HomeAboutUs />
       </section>
-
 
       <section>
         <HomeFooter />
