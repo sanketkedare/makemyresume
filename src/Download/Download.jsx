@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Navbar from "../Components/Resume/Navbar";
-import { useSelector } from "react-redux";
 import CreateResume from "../Templates/CreateResume";
 import Selection from "./utils/Selection";
 import Options from "./utils/Options";
@@ -10,7 +9,6 @@ import Available from "./utils/Available";
 import CreateButton from "./utils/CreateButton";
 
 const Download = () => {
-  const template = useSelector((state) => state.Template || "No Data Available");
   const [includeDOB, setIncludeDOB] = useState(true);
   const [grade, setIncludeGrade] = useState(true);
   const [projectdate, setProjectDate] = useState(true);
@@ -54,7 +52,8 @@ const Download = () => {
        <CreateButton fun = {onCreate}/>
 
       </div>
-             {create && <CreateResume props={template} />}
+   
+             {create && <CreateResume  />}
       </div>
     </div>
   );

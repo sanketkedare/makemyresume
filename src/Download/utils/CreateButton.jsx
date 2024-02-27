@@ -8,7 +8,7 @@ const CreateButton = ({fun}) => {
                      hover:bg-yellow-700 hover:text-white"
             onClick={fun}
           >
-            Create Resume
+            Download Resume
           </button>
         </div>
   )

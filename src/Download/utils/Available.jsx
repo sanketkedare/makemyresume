@@ -10,9 +10,9 @@ const Available = () => {
       className="flex justify-between items-center w-full my-4
                           border-2 border-green-500 p-2 rounded-xl bg-green-400"
     >
-      <h1 className="bg-transparent text-black font-bold">Available Data :</h1>
+      <h1 className="bg-transparent text-black font-bold">Available Data</h1>
       <div className="flex bg-inherit items-center">
-        <h1 className="bg-transparent text-black font-bold">
+        <h1 className="bg-transparent text-black text-sm font-bold">
           {data ? data: "No Data Available"}
         </h1>
 
